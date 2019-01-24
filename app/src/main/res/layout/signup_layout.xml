@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_rectangle"
+            android:gravity="center">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:cardCornerRadius="15dp"
+         android:layout_centerInParent="true"
+         android:layout_marginRight="20dp"
+         android:layout_marginLeft="20dp"
+         android:id="@+id/card_id"
+         >
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="15dp">
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <EditText
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="Enter full name"
+                     android:maxLines="1"
+                     android:singleLine="true"
+                     android:layout_toLeftOf="@+id/name_icon_id"
+                     android:background="@null"
+                     />
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/name_icon"
+                     android:id="@+id/name_icon_id"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"/>
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="15dp">
+
+                 <EditText
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="Enter email"
+                     android:inputType="textEmailAddress"
+
+                     />
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/mail_icon"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"/>
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="15dp"
+                 android:layout_marginBottom="20dp">
+
+                 <EditText
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="Enter password"
+                     android:inputType="textPassword"
+                     />
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/password_icon"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"/>
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+
+     </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_above="@+id/sign_up_txt"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:layout_above="@+id/card_id"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sign_up_txt"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_below="@+id/card_id"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-20dp"
+        android:id="@+id/sign_up_btn"
+        android:background="@drawable/rounded_rectangle"
+        android:textColor="#fff"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up with facebook"
+        android:layout_below="@+id/sign_up_btn"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_rectangle"
+        android:textColor="#fff"
+        android:backgroundTint="#304ffe"
+        />
+
+</RelativeLayout>
